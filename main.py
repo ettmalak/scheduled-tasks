@@ -13,8 +13,9 @@ import datetime, pandas, smtplib, random, os
 
 now = datetime.datetime.now()
 day = now.today().date()
-email = "mettabia862@gmail.com"
-password = "ljtk avnq hhuj ipyz"
+
+email = os.environ.get("MY_EMAIL")
+password = os.environ.get("MY_PASSWORD")
 
 data = pandas.read_csv("./birthdays.csv")
 todays_month=now.month
